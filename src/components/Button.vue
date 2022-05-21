@@ -1,5 +1,9 @@
 <template>
-    <button @click="handleClick" :style="{ background: color }" class="btn">
+    <button
+        @click="$emit('btn-click')"
+        :style="{ background: color }"
+        class="btn"
+    >
         {{ text }}
     </button>
 </template>
@@ -10,11 +14,6 @@ export default {
     props: {
         text: String,
         color: String,
-    },
-    methods: {
-        handleClick() {
-            console.log('click')
-        },
     },
 }
 </script>
